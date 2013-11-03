@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tell Tell: storytelling made fun</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="author" content="Tell Tell, LLC">
+	<meta name="robots" content="index,follow,archive">
+	<meta name="description" content="Tell Tell is a beautiful iPhone app that allows you to collaborate on stories and share them with your friends. You can finally create breathtaking stories through our user-friendly platform and up-to-the-minute cloud synced personal and professional storyboarding app. Brought to you by Tell Tell, LLC.">
+
+	<meta property="og:image" content="http://myclique.is/images/share_fb.jpg">
+	<meta property="og:title" content="Check out this beautiful iPhone app for storytelling.">
+	<meta property="og:description" content="Tell Tell is a beautiful iPhone app that allows you to collaborate on stories and share them with your friends.">
+	<meta property="og:url" content="http://myclique.is">
+	<meta property="og:site_name" content="Tell Tell: an app for people with a story to tell">
+	<meta property="og:type" content="website">
+
+	<link rel="author" href="humans.txt" />
+	<link rel="stylesheet" type="text/css" href="http://myclique.is/fonts/78428/793D372F3C64AD5ED.css" />
+	<link rel="stylesheet" href="style.css" media="screen">
+
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="/css/ie8.css?v=0.1" media="screen">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<header>
+
+	<h1><img src="title.png" alt="Tell Tell" title="Tell Tell" /></h1>
+	<h2>Keep the <em>laugh</em> going.</h2>
+
+</header>
+
+<img src="screen1.png" id="longshadow" alt="">
+
+<div id="follow_top">
+	<a href="https://twitter.com/TellTell" class="twitter-follow-button" data-show-count="false">Follow @TellTell</a>
+</div>
+
+<section id="block1">
+
+	<h3>Making storytelling fun again</h3>
+	<p>Introducing the simplest way to create and collaborate on stories.</p>
+
+</section>
+
+
+<hr/>
+
+
+<section id="block2">
+
+	<h3>
+		Create a story.<br/>
+		Get instant feedback.<br/>
+		<em>Choose your favorite narrative.</em>
+	</h3>
+	<hr/>
+	<p>Join a community of storytellers.</p>
+
+</section>
+
+
+<section id="block3">
+
+	<div id="subscribe" data-state='form'>
+
+		<div id="row1">
+			<p>A new <span>chapter</span> in your creativity.</p>
+		</div>
+		<div id="row2">
+			<form id="invite" action="http://focuslabllc.us7.list-manage2.com/subscribe/post?u=23ddd337e3fd0a2589261d428&amp;id=d945fe3e40" method="post" target="_blank">
+				<input name="EMAIL" type="text" placeholder="Add your email address" />
+				<button name="submit" value="Subscribe" type="submit">Try Me</button>
+			</form>
+		</div>
+
+	</div>
+
+	<footer>
+		<hr/>
+		<div id="follow_bottom">
+			<a href="https://twitter.com/TellTell" class="twitter-follow-button" data-show-count="false">Follow @TellTell</a>
+		</div>
+		<p>Made in Hong Kong. A <a href="http://focuslabllc.com">Tell Tell, LLC</a> product.</p>
+	</footer>
+
+</section>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//platform.twitter.com/widgets.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script type="text/javascript">
+function fbs_click() {
+	u ='http://myclique.is/';
+	t = document.title;
+	window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+	return false;
+}
+$(function(){
+	var subscribe = $('#subscribe');
+	var subscribeState;
+	$(document).on('submit', 'form', function(e){
+		e.preventDefault();
+		subscribeState = subscribe.attr('data-state');
+		$.ajax({
+			type:     'post',
+			url:      '/',
+			data:     $('form').serialize(),
+			cache:    false,
+			dataType: 'json',
+			success:  function(data) {
+				var newContent = data.html;
+				if (subscribeState != data.state) {
+					subscribe.attr('data-state', data.state);
+					subscribe.animate({opacity: 0},300, function(){
+						subscribe.html(data.html).animate({opacity:1}, 300);
+					});
+				}
+			}
+		});
+	});
+});
+</script>
+<!--[if lte IE 9]>
+<script src="/js/jquery.placeholder.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="/js/jquery.response.js"></script>
+<![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3994429-31', 'myclique.is');
+  ga('send', 'pageview');
+
+  var GoSquared = {};
+  GoSquared.acct = "GSN-634606-X";
+  (function(w){
+    function gs(){
+      w._gstc_lt = +new Date;
+      var d = document, g = d.createElement("script");
+      g.type = "text/javascript";
+      g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+      var s = d.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(g, s);
+    }
+    w.addEventListener ?
+      w.addEventListener("load", gs, false) :
+      w.attachEvent("onload", gs);
+  })(window);
+</script>
+</body>
+</html>
